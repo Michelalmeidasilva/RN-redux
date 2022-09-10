@@ -1,17 +1,31 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useReducer } from 'react';
 import { useTheme } from '@react-navigation/native';
 
-import { Column, Row, Text } from 'src/components';
+import { Button, Column, Row, Text } from 'src/components';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+
+import { increment, selectCount } from 'src/states/counter-slice/counterSlice';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Home: FC = () => {
   const { colors } = useTheme();
+  const countSlice = useSelector(selectCount);
+  const dispatch = useDispatch();
 
   return (
     <Column alignItems='center' flex={1} justifyContent='center' p='16px'>
-      <Row alignItems='center' mb='10px'>
+      <Row alignItems='center' mb='10px' flexDirection={'column'}>
         <Text color={colors.primary} mr={2}>
-          Built with react-native-nave-typescript
+          {countSlice}
         </Text>
+
+        <Button
+          onPress={() => {
+            dispatch(increment());
+          }}
+          text='PRESS ME'
+        />
       </Row>
     </Column>
   );
