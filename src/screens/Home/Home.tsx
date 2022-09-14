@@ -19,6 +19,8 @@ const Home: FC = () => {
           {countSlice}
         </Text>
 
+        <Text style={{ color: 'purple' }}>New text</Text>
+
         <Button
           onPress={() => {
             dispatch(increment());
