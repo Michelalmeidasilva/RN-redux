@@ -14,10 +14,12 @@ const Home: FC = () => {
 
   return (
     <Column alignItems='center' flex={1} justifyContent='center' p='16px'>
-      <Row alignItems='center' mb='10px' flexDirection={'column'}>
+      <Column alignItems='center' mb='10px' flexDirection={'row'}>
         <Text color={colors.primary} mr={2}>
           {countSlice}
         </Text>
+
+        <Text>New text</Text>
 
         <Button
           onPress={() => {
@@ -25,7 +27,7 @@ const Home: FC = () => {
           }}
           text='PRESS ME'
         />
-      </Row>
+      </Column>
     </Column>
   );
 };
