@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 import { increment, selectCount } from 'src/states/counter-slice/counterSlice';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Home: FC = () => {
   const { colors } = useTheme();
