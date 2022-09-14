@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: joabalea/App-Center-action@v1.0.2
+      - uses: wzieba/AppCenter-Github-Action@v1.3.3
         with:
           command: appcenter codepush release-react -a michelalmeidasilva/ReactNativeRedux
           token: ${{secrets.APP_CENTER_LOGIN}}
