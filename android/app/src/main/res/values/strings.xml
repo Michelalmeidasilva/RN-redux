@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ReactNativeRedux</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">zE8n29QgXhodD66iudVZJW-wMit3DqORQvace</string>
 </resources>
